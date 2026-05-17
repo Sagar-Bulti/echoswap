@@ -1,19 +1,19 @@
-version: '3'
-
 services:
 
   backend:
     build: ./backend
     ports:
       - "5000:5000"
+
     environment:
       - PORT=5000
-      - MONGO_URI=mongodb+srv://sagarbulti:SagarBB2005@cluster0.cuesdjn.mongodb.net/?appName=Cluster0
+      - MONGO_URI=mongodb+srv://sagarbulti:Sagar123@cluster0.cuesdjn.mongodb.net/spendwise?retryWrites=true&w=majority&appName=Cluster0
       - JWT_SECRET=secretkey
 
   frontend:
     build: ./frontend
     ports:
       - "5173:5173"
+
     depends_on:
       - backend
